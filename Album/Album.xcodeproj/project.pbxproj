@@ -14,6 +14,7 @@
 		4F5C74CF2771702800F19400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74CE2771702800F19400 /* Assets.xcassets */; };
 		4F5C74D22771702800F19400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74D02771702800F19400 /* LaunchScreen.storyboard */; };
 		4F5C74DA2771706300F19400 /* snacks.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74D92771706300F19400 /* snacks.mlmodel */; };
+		4F5C74DC2771791600F19400 /* imageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74DB2771791600F19400 /* imageItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4F5C74D12771702800F19400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5C74D32771702800F19400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F5C74D92771706300F19400 /* snacks.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = snacks.mlmodel; path = ../snacks.mlmodel; sourceTree = "<group>"; };
+		4F5C74DB2771791600F19400 /* imageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4F5C74C52771702700F19400 /* AppDelegate.swift */,
 				4F5C74C72771702700F19400 /* SceneDelegate.swift */,
 				4F5C74C92771702700F19400 /* ViewController.swift */,
+				4F5C74DB2771791600F19400 /* imageItem.swift */,
 				4F5C74CB2771702700F19400 /* Main.storyboard */,
 				4F5C74CE2771702800F19400 /* Assets.xcassets */,
 				4F5C74D02771702800F19400 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				4F5C74CA2771702700F19400 /* ViewController.swift in Sources */,
 				4F5C74DA2771706300F19400 /* snacks.mlmodel in Sources */,
+				4F5C74DC2771791600F19400 /* imageItem.swift in Sources */,
 				4F5C74C62771702700F19400 /* AppDelegate.swift in Sources */,
 				4F5C74C82771702700F19400 /* SceneDelegate.swift in Sources */,
 			);

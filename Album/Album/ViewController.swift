@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     
     var firstTime = true
     
+    var imageItems:[imageItem] = []
+    var itemCount:Int = 0
+    
     lazy var classificationRequest: VNCoreMLRequest = {
         do{
             let classifier = try snacks(configuration: MLModelConfiguration())
@@ -108,6 +111,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
         let image = info[.originalImage] as! UIImage
         imageView.image = image
+        
+        imageItems[itemCount] = imageItem(_image: image, _tag: "")
 
         classify(image: image)
     }
@@ -115,7 +120,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
 extension ViewController {
     func processObservations(for request: VNRequest, error: Error?) {
-        // print("Result:",request.results)
         if let results = request.results as? [VNClassificationObservation] {
             if results.isEmpty {
                 self.resultsLabel.text = "Nothing found"
@@ -124,9 +128,12 @@ extension ViewController {
                 let confidence = results[0].confidence
                 if confidence < 0.70 {
                     self.resultsLabel.text! = "I'm not sure.Is this a/an " + result + " ?"
+                    imageItems[itemCount].tag = "Not Sure"
                 } else {
                     self.resultsLabel.text! = "I'm " + String(format:"%.1f%%", confidence * 100) + " sure that this is a/an " + result + "."
+                    imageItems[itemCount].tag = result
                 }
+                itemCount += 1
             }
         } else if let error = error {
             self.resultsLabel.text = "Error: \(error.localizedDescription)"
