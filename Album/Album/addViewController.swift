@@ -6,11 +6,15 @@
 //
 
 import UIKit
-import CoreML
 import CoreMedia
+import CoreML
 import Vision
 
-class ViewController: UIViewController {
+protocol AddPhotoDelegate {
+    func addPhoto(image: UIImage, tag: String)
+}
+
+class addViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var photoLibraryButton: UIButton!
     @IBOutlet weak var resultsLabel: UILabel!
@@ -18,10 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultsView: UIView!
     @IBOutlet weak var resultsConstraint: NSLayoutConstraint!
     
-    var firstTime = true
-    
-    var imageItems:[imageItem] = []
-    var itemCount:Int = 0
+    var addPhotoDelegate: AddPhotoDelegate?
+    var targetImage = UIImage()
     
     lazy var classificationRequest: VNCoreMLRequest = {
         do{
@@ -37,7 +39,7 @@ class ViewController: UIViewController {
             fatalError("Failed to create request")
         }
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
@@ -49,10 +51,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
 
         // Show the "choose or take a photo" hint when the app is opened.
-        if firstTime {
-            showResultsView(delay: 0.5)
-            firstTime = false
-        }
+        showResultsView(delay: 0)
     }
   
     @IBAction func takePicture() {
@@ -93,7 +92,7 @@ class ViewController: UIViewController {
             self.resultsView.alpha = 0
         }
     }
-
+    
     func classify(image: UIImage) {
         let handler = VNImageRequestHandler(cgImage: image.cgImage!)
         do {
@@ -102,38 +101,37 @@ class ViewController: UIViewController {
             print("Failed to perform classification: \(error)")
         }
     }
-    
+
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
+extension addViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      picker.dismiss(animated: true)
 
-        let image = info[.originalImage] as! UIImage
-        imageView.image = image
-        
-        imageItems[itemCount] = imageItem(_image: image, _tag: "")
-
-        classify(image: image)
-    }
+      let image = info[.originalImage] as! UIImage
+      imageView.image = image
+      self.targetImage = image
+      
+      classify(image: image)
+  }
 }
 
-extension ViewController {
+extension addViewController {
     func processObservations(for request: VNRequest, error: Error?) {
+        // print("Result:",request.results)
         if let results = request.results as? [VNClassificationObservation] {
             if results.isEmpty {
                 self.resultsLabel.text = "Nothing found"
             } else {
                 let result = results[0].identifier
                 let confidence = results[0].confidence
-                if confidence < 0.70 {
+                if confidence < 0.80 {
                     self.resultsLabel.text! = "I'm not sure.Is this a/an " + result + " ?"
-                    imageItems[itemCount].tag = "Not Sure"
+                    self.addPhotoDelegate?.addPhoto(image: self.targetImage, tag: "Not Sure")
                 } else {
                     self.resultsLabel.text! = "I'm " + String(format:"%.1f%%", confidence * 100) + " sure that this is a/an " + result + "."
-                    imageItems[itemCount].tag = result
+                    self.addPhotoDelegate?.addPhoto(image: self.targetImage, tag: result)
                 }
-                itemCount += 1
             }
         } else if let error = error {
             self.resultsLabel.text = "Error: \(error.localizedDescription)"
@@ -144,4 +142,5 @@ extension ViewController {
         self.showResultsView()
     }
 }
+
 

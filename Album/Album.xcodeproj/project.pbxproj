@@ -9,25 +9,41 @@
 /* Begin PBXBuildFile section */
 		4F5C74C62771702700F19400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74C52771702700F19400 /* AppDelegate.swift */; };
 		4F5C74C82771702700F19400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74C72771702700F19400 /* SceneDelegate.swift */; };
-		4F5C74CA2771702700F19400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74C92771702700F19400 /* ViewController.swift */; };
+		4F5C74CA2771702700F19400 /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74C92771702700F19400 /* addViewController.swift */; };
 		4F5C74CD2771702700F19400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74CB2771702700F19400 /* Main.storyboard */; };
 		4F5C74CF2771702800F19400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74CE2771702800F19400 /* Assets.xcassets */; };
 		4F5C74D22771702800F19400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74D02771702800F19400 /* LaunchScreen.storyboard */; };
 		4F5C74DA2771706300F19400 /* snacks.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74D92771706300F19400 /* snacks.mlmodel */; };
-		4F5C74DC2771791600F19400 /* imageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74DB2771791600F19400 /* imageItem.swift */; };
+		4F5C74E42771B1BD00F19400 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74E32771B1BD00F19400 /* apple.jpg */; };
+		4F5C74E62771B1DC00F19400 /* orange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74E52771B1DC00F19400 /* orange.jpg */; };
+		4F5C74E82771B1F300F19400 /* strawberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C74E72771B1F300F19400 /* strawberry.jpg */; };
+		4F5C74EA2771C64900F19400 /* albumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74E92771C64900F19400 /* albumTableViewController.swift */; };
+		4F5C74EC2771C66300F19400 /* albumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74EB2771C66300F19400 /* albumTableViewCell.swift */; };
+		4F5C74EE2771D10000F19400 /* photoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74ED2771D10000F19400 /* photoTableViewCell.swift */; };
+		4F5C74F02771D15C00F19400 /* photoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74EF2771D15C00F19400 /* photoTableViewController.swift */; };
+		4F5C74F22771D4DB00F19400 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74F12771D4DB00F19400 /* imageViewController.swift */; };
+		4F5C74F42771FD8A00F19400 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C74F32771FD8A00F19400 /* CGImagePropertyOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F5C74C22771702700F19400 /* Album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Album.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5C74C52771702700F19400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F5C74C72771702700F19400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F5C74C92771702700F19400 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F5C74C92771702700F19400 /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		4F5C74CC2771702700F19400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F5C74CE2771702800F19400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5C74D12771702800F19400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F5C74D32771702800F19400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F5C74D92771706300F19400 /* snacks.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = snacks.mlmodel; path = ../snacks.mlmodel; sourceTree = "<group>"; };
-		4F5C74DB2771791600F19400 /* imageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageItem.swift; sourceTree = "<group>"; };
+		4F5C74E32771B1BD00F19400 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple.jpg; path = ../../../snacks/train/apple/apple.jpg; sourceTree = "<group>"; };
+		4F5C74E52771B1DC00F19400 /* orange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = orange.jpg; path = ../../../snacks/train/orange/orange.jpg; sourceTree = "<group>"; };
+		4F5C74E72771B1F300F19400 /* strawberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = strawberry.jpg; path = ../../../snacks/train/strawberry/strawberry.jpg; sourceTree = "<group>"; };
+		4F5C74E92771C64900F19400 /* albumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumTableViewController.swift; sourceTree = "<group>"; };
+		4F5C74EB2771C66300F19400 /* albumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumTableViewCell.swift; sourceTree = "<group>"; };
+		4F5C74ED2771D10000F19400 /* photoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoTableViewCell.swift; sourceTree = "<group>"; };
+		4F5C74EF2771D15C00F19400 /* photoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoTableViewController.swift; sourceTree = "<group>"; };
+		4F5C74F12771D4DB00F19400 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
+		4F5C74F32771FD8A00F19400 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGImagePropertyOrientation.swift; path = "../../../iw05-FibonaccciYan/ObjectDetection/Snacks/CGImagePropertyOrientation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +79,20 @@
 			children = (
 				4F5C74C52771702700F19400 /* AppDelegate.swift */,
 				4F5C74C72771702700F19400 /* SceneDelegate.swift */,
-				4F5C74C92771702700F19400 /* ViewController.swift */,
-				4F5C74DB2771791600F19400 /* imageItem.swift */,
+				4F5C74C92771702700F19400 /* addViewController.swift */,
+				4F5C74E92771C64900F19400 /* albumTableViewController.swift */,
+				4F5C74ED2771D10000F19400 /* photoTableViewCell.swift */,
+				4F5C74EF2771D15C00F19400 /* photoTableViewController.swift */,
+				4F5C74EB2771C66300F19400 /* albumTableViewCell.swift */,
 				4F5C74CB2771702700F19400 /* Main.storyboard */,
+				4F5C74F12771D4DB00F19400 /* imageViewController.swift */,
+				4F5C74F32771FD8A00F19400 /* CGImagePropertyOrientation.swift */,
 				4F5C74CE2771702800F19400 /* Assets.xcassets */,
 				4F5C74D02771702800F19400 /* LaunchScreen.storyboard */,
 				4F5C74D32771702800F19400 /* Info.plist */,
+				4F5C74E32771B1BD00F19400 /* apple.jpg */,
+				4F5C74E52771B1DC00F19400 /* orange.jpg */,
+				4F5C74E72771B1F300F19400 /* strawberry.jpg */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -133,7 +157,10 @@
 			files = (
 				4F5C74D22771702800F19400 /* LaunchScreen.storyboard in Resources */,
 				4F5C74CF2771702800F19400 /* Assets.xcassets in Resources */,
+				4F5C74E62771B1DC00F19400 /* orange.jpg in Resources */,
 				4F5C74CD2771702700F19400 /* Main.storyboard in Resources */,
+				4F5C74E82771B1F300F19400 /* strawberry.jpg in Resources */,
+				4F5C74E42771B1BD00F19400 /* apple.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F5C74CA2771702700F19400 /* ViewController.swift in Sources */,
+				4F5C74EC2771C66300F19400 /* albumTableViewCell.swift in Sources */,
+				4F5C74F02771D15C00F19400 /* photoTableViewController.swift in Sources */,
+				4F5C74EE2771D10000F19400 /* photoTableViewCell.swift in Sources */,
+				4F5C74EA2771C64900F19400 /* albumTableViewController.swift in Sources */,
+				4F5C74CA2771702700F19400 /* addViewController.swift in Sources */,
+				4F5C74F22771D4DB00F19400 /* imageViewController.swift in Sources */,
+				4F5C74F42771FD8A00F19400 /* CGImagePropertyOrientation.swift in Sources */,
 				4F5C74DA2771706300F19400 /* snacks.mlmodel in Sources */,
-				4F5C74DC2771791600F19400 /* imageItem.swift in Sources */,
 				4F5C74C62771702700F19400 /* AppDelegate.swift in Sources */,
 				4F5C74C82771702700F19400 /* SceneDelegate.swift in Sources */,
 			);
@@ -306,6 +338,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +368,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
